@@ -25,8 +25,8 @@ export class SocketioService {
   }
 
   setupSocketConnection() {
-    // this.socket = io("https://peaceful-harbor-45990.herokuapp.com/")
-    this.socket = io("http://localhost:3000/")
+    this.socket = io("https://peaceful-harbor-45990.herokuapp.com/")
+    // this.socket = io("http://localhost:3000/")
     
     // this.socket.on('connect', () => {
     //   console.log(this.socket.id); // 'G5p5...'

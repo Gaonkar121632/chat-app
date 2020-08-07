@@ -1,27 +1,27 @@
-# ChatApp
+# Chat-app backend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+live chat using, node.js with the Express.JS framework, socket.io.
 
-## Development server
+## Link
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* [https://chit-chat.onrender.com/](https://chit-chat.onrender.com/): find the production link here.  This is hosted in Heroku's free tier, so it may be slow 
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* User can request for chat with other user
+* User can see list of online users
+* user has to enter app by entering his name
 
-## Build
+## Note 
+* Basic features are implemented
+* Issues and bugs exist
+* Please find the demo video in demo folder
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Running in Local
 
-## Running unit tests
+	git clone https://github.com/Gaonkar121632/chat-app
+	cd chat-app
+	npm install
+	npm start
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    open http://localhost:4200
