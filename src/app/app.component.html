@@ -52,7 +52,7 @@
               </ng-container>
               <ng-container *ngIf="!toUser.accepted">
                 <span>
-                  <button class="btn btn-primary btn-sm" id="btn-chat" (click)="sendRequest(toUser.sessionId)">Send
+                  <button class="btn btn-primary btn-sm" id="btn-chat" (keyup.enter)="sendRequest(toUser.sessionId)" (click)="sendRequest(toUser.sessionId)">Send
                     Request</button>
                 </span>
                 <p *ngIf="toUser.reject">{{toUser.name}} rejected your request, Try Again!</p>

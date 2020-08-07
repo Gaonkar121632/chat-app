@@ -16,7 +16,7 @@ export class AppComponent {
   allUsers = []
   UserName: string;
   mySession: void;
-  toUser: object;
+  toUser: any;
   mdlSampleIsOpen = false
   newReqId: string;
   text: string
@@ -87,6 +87,16 @@ export class AppComponent {
       this.Chats = []
     })
 
+    this.socketioService.listen("diconnected").subscribe((res: string) => {
+      if(this.toUser["sessionId"]==res){
+        this.modalData = new ModalInfo({title:"session End", body:`${this.toUser["name"]} left the chat`,sessionOut:true,request:false})
+        this.mdlSampleIsOpen = true
+        this.toUser=false
+      }
+      
+      this.removeByAttr(this.allUsers,"sessionId",res)
+    })
+
 
 
   }
@@ -104,6 +114,7 @@ export class AppComponent {
   }
   sendRequest(toUserId) {
     this.socketioService.emmit("request", toUserId)
+
   }
 
   closeModal() {
@@ -140,6 +151,21 @@ export class AppComponent {
   sessionEnd(){
     this.mdlSampleIsOpen=false
   }
+
+
+  removeByAttr = function(arr, attr, value){
+    var i = arr.length;
+    while(i--){
+       if( arr[i] 
+           && arr[i].hasOwnProperty(attr) 
+           && (arguments.length > 2 && arr[i][attr] === value ) ){ 
+
+           arr.splice(i,1);
+
+       }
+    }
+    return arr;
+}
 }
 
 
