@@ -1,6 +1,6 @@
-# Chat-app backend
+# Chat-app
 
-live chat using, node.js with the Express.JS framework, socket.io.
+live chat using, node.js with the Express.JS framework,bootstrap, socket.io.
 
 ## Link
 
